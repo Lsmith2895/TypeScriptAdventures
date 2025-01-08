@@ -1,6 +1,7 @@
 import "./homePage.css";
 import "../../assets/styles/globalStyles.css";
 import { StartButton } from "../utils/startButton";
+import kingdomImage from "../../assets/kingdomHomePage.webp";
 
 export function HomePage() {
   return (
@@ -11,7 +12,7 @@ export function HomePage() {
         <div className="author">By Logan Smith</div>
       </header>
       <img
-        src="./src/assets/kingdomHomePage.webp"
+        src={kingdomImage}
         alt="photo of a king, his castle, and a treasure chest"
         className="heading-photo"
       />

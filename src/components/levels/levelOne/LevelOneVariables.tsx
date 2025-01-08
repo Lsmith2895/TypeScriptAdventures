@@ -2,6 +2,7 @@ import { useState, useEffect, useMemo } from "react";
 import { Editor } from "@monaco-editor/react";
 import { Link } from "react-router-dom";
 import { validateCode } from "../../utils/validateCode";
+import wizardsCurse from "../../../assets/wizardsCurseLesson1.webp";
 
 export function LevelOne() {
   const [goldAmount, setGoldAmount] = useState<string>(
@@ -32,7 +33,7 @@ export function LevelOne() {
       </header>
       <img
         className="responsive-img"
-        src="./src/assets/wizardsCurseLesson1.webp"
+        src={wizardsCurse}
         alt="a photo of a treasure chest overflowing with gold"
       />
 
