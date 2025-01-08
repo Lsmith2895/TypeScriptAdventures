@@ -1,5 +1,4 @@
 import React from "react";
-import "./FallingCoins.css";
 
 interface FallingCoinsProps {
   onAnimationEnd?: () => void;
