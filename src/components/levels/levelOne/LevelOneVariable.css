@@ -1,0 +1,53 @@
+/* Specific Styles for LevelOne Component */
+
+/* Additional styles for the Editor */
+.editor-container {
+  margin-top: 20px;
+}
+
+/* Image specific to this level */
+.level-one-img {
+  border: 3px solid #ffb74d; /* Vibrant border to highlight the image */
+  border-radius: 12px;
+  margin: 20px auto;
+  display: block;
+  max-width: 100%;
+}
+
+/* Quest specific styles */
+.quest-section {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #fffde7; /* Soft yellow for quest sections */
+  border: 2px dashed #ffb300; /* Dashed border to emphasize quest sections */
+  border-radius: 12px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Custom styles for Next Lesson button */
+.next-lesson-btn {
+  margin-top: 20px;
+  display: block;
+  width: fit-content;
+  padding: 10px 20px;
+  background-color: #388e3c; /* Success green */
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
+}
+
+.next-lesson-btn:hover {
+  background-color: #2e7d32;
+  transform: scale(1.05);
+}
+
+.next-lesson-btn:active {
+  transform: scale(1);
+}

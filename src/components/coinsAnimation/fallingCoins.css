@@ -1,0 +1,53 @@
+.falling-coins {
+  position: fixed;
+  top: -300px;
+  left: -350px;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.coin {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: -300px;
+  animation-name: fall;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  --waveAmplitude: 20px;
+}
+
+.coin-spin {
+  width: 100%;
+  height: 100%;
+  background-image: url("../assets/nobackgroundcoin.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+
+  50% {
+    transform: translateY(50vh) translateX(var(--waveAmplitude));
+  }
+
+  100% {
+    transform: translateY(110vh) translateX(calc(var(--waveAmplitude) * -1));
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

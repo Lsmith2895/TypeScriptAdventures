@@ -1,0 +1,59 @@
+.author {
+  font-size: 1.2rem;
+  color: #888;
+  margin-top: 10px;
+  font-style: italic;
+}
+
+.heading-photo {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.highlight-text {
+  color: #fb8c00; /* Vibrant orange */
+  font-weight: bold;
+  background: #ffecb3; /* Soft yellow highlight */
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.start-section {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.start-section p {
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.start-section .cta-button {
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .home-container {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 2.4rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  h3 {
+    font-size: 1.4rem;
+  }
+
+  .start-section p {
+    font-size: 1.2rem;
+  }
+}
