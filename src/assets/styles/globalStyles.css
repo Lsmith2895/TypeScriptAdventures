@@ -239,6 +239,125 @@ button:active {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
 }
 
+.orb-container {
+  position: relative;
+}
+
+.orb {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  background: radial-gradient(circle, #a64bf4, #7423a9);
+  border-radius: 50%;
+  box-shadow:
+    0 0 20px #a64bf4,
+    0 0 40px #7423a9,
+    0 0 60px #4a1786;
+  animation: moveOrb 3s infinite linear;
+}
+
+.orb::before {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 40px;
+  top: 5px;
+  left: -110px;
+  background: linear-gradient(
+    to right,
+    rgba(116, 35, 169, 0.7),
+    rgba(166, 75, 244, 0.2),
+    rgba(166, 75, 244, 0)
+  );
+  border-radius: 50%;
+  filter: blur(8px);
+  animation: tail 3s infinite ease-in-out;
+}
+
+.orb::after {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 20px;
+  top: 15px;
+  left: -60px;
+  background: linear-gradient(
+    to right,
+    rgba(166, 75, 244, 1),
+    rgba(116, 35, 169, 0.3),
+    rgba(116, 35, 169, 0)
+  );
+  border-radius: 50%;
+  filter: blur(4px);
+  animation: tail 3s infinite ease-in-out;
+}
+
+/* Sparkles */
+.orb-container::before {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  top: 20px;
+  left: -50px;
+  background: radial-gradient(circle, #ffffff, rgba(255, 255, 255, 0));
+  border-radius: 50%;
+  filter: blur(2px);
+  animation: sparkle 1.2s infinite ease-in-out;
+}
+
+.orb-container::after {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  top: 30px;
+  left: -80px;
+  background: radial-gradient(circle, #ffffff, rgba(255, 255, 255, 0));
+  border-radius: 50%;
+  filter: blur(1px);
+  animation: sparkle 1.5s infinite ease-in-out;
+}
+
+/* Keyframes */
+@keyframes moveOrb {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(100px, 100px);
+  }
+  100% {
+    transform: translate(200px, 0);
+  }
+}
+
+@keyframes tail {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0.4;
+    transform: translateX(50px);
+  }
+}
+
+@keyframes sparkle {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+}
+
 @media (max-width: 768px) {
   .container {
     padding: 20px;
